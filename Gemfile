@@ -54,6 +54,11 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
+group :production do
+  gem 'pg', '~> 0.21.0'
+  gem 'rails_12factor'
+end
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
@@ -72,6 +77,3 @@ group :test do
   gem "webdrivers"
 end
 
-group :production do  
-  gem 'pg'
-end
