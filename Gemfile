@@ -48,15 +48,19 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-group :development, :test do
-  gem "sqlite3", "~> 1.4"
+ # group :development, :test do
+ # gem "sqlite3", "~> 1.4"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+# gem "debug", platforms: %i[ mri mingw x64_mingw ]
+# end
+
+group :development, :test do
+  gem 'sqlite3', '~> 1.4'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :production do
-  gem 'pg', '~> 0.21.0'
-  gem 'rails_12factor'
+  gem 'pg'
 end
 
 group :development do
